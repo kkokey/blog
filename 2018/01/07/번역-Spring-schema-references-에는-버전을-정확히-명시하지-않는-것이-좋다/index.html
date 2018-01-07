@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 잡동사니 | Just...</title>
+  <title>[번역] Spring schema references 에는 버전을 정확히 명시하지 않는 것이 좋다. | Just...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Just...">
-<meta property="og:url" content="https://kkokey.github.io/blog/tags/잡동사니/index.html">
+  <meta name="description" content="먼저 이 글은 do-not-specify-version-numbers-in-spring-schema-references을 번역한 글임을 밝혀둡니다.혹시 문제가 될 경우 즉시 삭제 하겠습니다.
+Spring schema references 에는 버전을 정확히 명시하지 않는 것이 좋다.
+만약 당신이 스프링 프로젝트 기반에서 일을 하고 있다면 스프링 설정파일의 헤">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[번역] Spring schema references 에는 버전을 정확히 명시하지 않는 것이 좋다.">
+<meta property="og:url" content="https://kkokey.github.io/blog/2018/01/07/번역-Spring-schema-references-에는-버전을-정확히-명시하지-않는-것이-좋다/index.html">
 <meta property="og:site_name" content="Just...">
+<meta property="og:description" content="먼저 이 글은 do-not-specify-version-numbers-in-spring-schema-references을 번역한 글임을 밝혀둡니다.혹시 문제가 될 경우 즉시 삭제 하겠습니다.
+Spring schema references 에는 버전을 정확히 명시하지 않는 것이 좋다.
+만약 당신이 스프링 프로젝트 기반에서 일을 하고 있다면 스프링 설정파일의 헤">
+<meta property="og:updated_time" content="2018-01-07T15:04:22.121Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Just...">
+<meta name="twitter:title" content="[번역] Spring schema references 에는 버전을 정확히 명시하지 않는 것이 좋다.">
+<meta name="twitter:description" content="먼저 이 글은 do-not-specify-version-numbers-in-spring-schema-references을 번역한 글임을 밝혀둡니다.혹시 문제가 될 경우 즉시 삭제 하겠습니다.
+Spring schema references 에는 버전을 정확히 명시하지 않는 것이 좋다.
+만약 당신이 스프링 프로젝트 기반에서 일을 하고 있다면 스프링 설정파일의 헤">
   
     <link rel="alternate" href="/atom.xml" title="Just..." type="application/atom+xml">
   
@@ -62,40 +72,72 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2016/10/30/JAVA-8-방향/" class="archive-article-date">
-  <time datetime="2016-10-29T23:39:59.000Z" itemprop="datePublished">10월 30</time>
+        <section id="main"><article id="post-번역-Spring-schema-references-에는-버전을-정확히-명시하지-않는-것이-좋다" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/01/07/번역-Spring-schema-references-에는-버전을-정확히-명시하지-않는-것이-좋다/" class="article-date">
+  <time datetime="2018-01-07T14:44:46.000Z" itemprop="datePublished">2018-01-07</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/translate/">translate</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2016/10/30/JAVA-8-방향/">JAVA 8 방향</a>
+    <h1 class="article-title" itemprop="name">
+      [번역] Spring schema references 에는 버전을 정확히 명시하지 않는 것이 좋다.
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>먼저 이 글은 <a href="https://howtodoinjava.com/spring/spring-core/do-not-specify-version-numbers-in-spring-schema-references/" target="_blank" rel="external">do-not-specify-version-numbers-in-spring-schema-references</a>을 번역한 글임을 밝혀둡니다.<br>혹시 문제가 될 경우 즉시 삭제 하겠습니다.</p>
+<p>Spring schema references 에는 버전을 정확히 명시하지 않는 것이 좋다.</p>
+<p>만약 당신이 스프링 프로젝트 기반에서 일을 하고 있다면 스프링 설정파일의 헤더 부분에 있는 스프링 모듈에 대한 schema references를 보았을 것이다.<br>스키마 레퍼런스에서 우리는 xml namespace와 버전 번호에 대한 얘기를 하고자 한다.</p>
+<p>버전 번호를 명확하게 하는 것은 필수가 아니다, 그리고 당신은 그것을 뺄 수 있다.<br>여기 예제를 보면 사실, 버전은 제거 해야 한다.</p>
+<p>스프링은 자동적으로 프로젝트에서 사용 가능한 가장 높은 버전의 모듈을 선택합니다.<br>또, 스프링 버전이 업데이트 되거나 프로젝트의 환경이 좋아지는 경우 새로운 기능을 위해 모든 xml 설정을 유지할 필요는 없습니다.</p>
+<p>버전을 사용하지 않는 스프링 설정 파일의 사용 예제 </p>
+<p><code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</div><div class="line">&lt;beans xmlns=<span class="string">"http://www.springframework.org/schema/beans"</span> </div><div class="line">       xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></div><div class="line">       xmlns:context=<span class="string">"http://www.springframework.org/schema/context"</span></div><div class="line">       xsi:schemaLocation=<span class="string">"http://www.springframework.org/schema/beans </span></div><div class="line">       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd</div><div class="line">       http://www.springframework.org/schema/context </div><div class="line">       http://www.springframework.org/schema/context/spring-context-3.0.xsd"&gt;</div><div class="line">						  </div><div class="line">&lt;!-- Other bean definitions--&gt;</div><div class="line">							  </div><div class="line">&lt;/beans&gt;</div></pre></td></tr></table></figure></code></p>
+<p></p>
+<p>이건 아래처럼 사용 될 수 있습니다.</p>
+<p><code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</div><div class="line">&lt;beans xmlns=<span class="string">"http://www.springframework.org/schema/beans"</span></div><div class="line">       xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></div><div class="line">       xmlns:context=<span class="string">"http://www.springframework.org/schema/context"</span></div><div class="line">       xsi:schemaLocation=<span class="string">"http://www.springframework.org/schema/beans</span></div><div class="line">       http://www.springframework.org/schema/beans/spring-beans.xsd</div><div class="line">       http://www.springframework.org/schema/context</div><div class="line">       http://www.springframework.org/schema/context/spring-context.xsd"&gt;</div><div class="line">													   </div><div class="line">&lt;!-- Other bean definitions--&gt;</div><div class="line">														   </div><div class="line">&lt;/beans&gt;</div></pre></td></tr></table></figure></code></p>
+<p></p>
+<p>의견을 덧붙이면..</p>
+<p>개인적으로 스프링은 책으로 공부한 것보다 인터넷에서 찾아보며 공부한 시간이 더 많네요.<br>책에 이런 내용들이 담겨져 있다면 좋을 것 같다고 생각이 드네요.</p>
+<p>기술적인 부분이라기 보다는 개발 편의성에 관련된 내용이라고 생각되지만,<br>그래도 모르는 것보다는 아는 것이 더 좋을 것 같아 이렇게 정리해 둡니다.</p>
+<p>더불어 번역을 허락해주신 HowToDoInJava 의 주인이신 Lokesh Gupta 에게 감사 드립니다.</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://kkokey.github.io/blog/blog/2018/01/07/번역-Spring-schema-references-에는-버전을-정확히-명시하지-않는-것이-좋다/" data-id="cjc4wgq1y000ac7g4fhq10v52" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Spring/">Spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/번역/">번역</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2018/01/01/프로그램-개발과-관련된-영문-글의-번역에-대해/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">프로그램 개발과 관련된 영문 글의 번역에 대해</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
