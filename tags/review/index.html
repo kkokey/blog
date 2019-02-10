@@ -347,8 +347,14 @@
 	<div class="widget">
 		<!-- AD_for_Just -->
 	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	  <script>
-	     (adsbygoogle = window.adsbygoogle || []).push({
+		<script>
+		  const scriptNode = document.createElement('script');
+		  scriptNode.src = this.gapiUrl;
+		  scriptNode.type = 'text/javascript';
+		  scriptNode.charset = 'utf-8';
+		  document.getElementsByTagName('head')[0].appendChild(scriptNode);
+
+		(adsbygoogle = window.adsbygoogle || []).push({
 					           google_ad_client: "ca-pub-1090826527330963",
 										           enable_page_level_ads: true
 															      });
